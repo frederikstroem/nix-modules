@@ -5,6 +5,15 @@
 # 🥔 Katofln's Nix Modules
 A collection of heavily opinionated, reusable Home Manager and NixOS modules—importable via Flakes—designed to be composable and explicitly enabled.
 
+Created with the help of these awesome projects:
+[devenv](https://github.com/cachix/devenv),
+[direnv](https://github.com/direnv/direnv),
+[Home Manager](https://github.com/nix-community/home-manager),
+[nix-options-doc](https://github.com/Thunderbottom/nix-options-doc),
+[NixOS](https://nixos.org/),
+[Nixpkgs](https://github.com/NixOS/nixpkgs),
+[Nushell](https://github.com/nushell/nushell)
+
 ## 🎯 Philosophy
 - **Bring Your Own Dependencies**: This repository does not include a `flake.lock` file — you control all dependency versions through your own flake inputs.
 - **Composable & Explicit Enablement**: Mix and match modules as needed for your specific use case. All modules are disabled by default and require explicit enablement.
@@ -72,3 +81,23 @@ A collection of heavily opinionated, reusable Home Manager and NixOS modules—i
 ```
 
 Now you can run `hello-nushell` in your shell to get a friendly potato greeting! 🥔
+
+# 🎛️ Module Options
+## [`katoflns-nix-modules.home-manager-username`](modules/default/default.nix#L5)
+Username used for Home Manager integration across all of Katofln's modules. 🥔
+
+This must be set when using any of Katofln's modules that integrate with Home Manager.
+All modules will use this username in their Home Manager configuration.
+
+**Type:** `lib.types.str`
+
+**Example:** `"katofln"`
+
+## [`katoflns-nix-modules.hello-nushell.enable`](modules/examples/hello-nushell/default.nix#L9)
+Enable the `hello-nushell` greeting command.
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+**Example:** `true`

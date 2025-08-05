@@ -6,7 +6,7 @@ let
 in
 {
   options.katoflns-nix-modules.hello-nushell = {
-    enable = lib.mkEnableOption "the hello-nushell greeting command";
+    enable = lib.mkEnableOption "Enable the `hello-nushell` greeting command.";
   };
 
   config = lib.mkIf cfg.enable {
