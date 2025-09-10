@@ -93,6 +93,46 @@ All modules will use this username in their Home Manager configuration.
 
 **Example:** `"katofln"`
 
+## [`katoflns-nix-modules.git.enable`](modules/git/default.nix#L9)
+Enable the Git module with configuration including:
+- Core Git with LFS and gitk — targeting high-performance mono-repo-like usage
+- Delta diff viewer
+- GitHub CLI integration
+- Custom git aliases and commands
+- Dracula theme for gitk
+- Mergiraf syntax-aware merge conflict resolver
+
+See the nix file for full details.
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+**Example:** `true`
+
+## [`katoflns-nix-modules.git.userName`](modules/git/default.nix#L21)
+Git username.
+
+**Type:** `lib.types.str`
+
+**Example:** `"katofln"`
+
+## [`katoflns-nix-modules.git.userEmail`](modules/git/default.nix#L27)
+Git email.
+
+**Type:** `lib.types.str`
+
+**Example:** `"katofln@example.com"`
+
+## [`katoflns-nix-modules.git.signingKey`](modules/git/default.nix#L33)
+The GPG key ID to use for signing commits.
+
+**Type:** `lib.types.nullOr lib.types.str`
+
+**Default:** `null`
+
+**Example:** `"0600 cf90 aa2a ea55 07a0  e657 4f43 3d8d 3205 3651"`
+
 ## [`katoflns-nix-modules.hello-nushell.enable`](modules/examples/hello-nushell/default.nix#L9)
 Enable the `hello-nushell` greeting command.
 
