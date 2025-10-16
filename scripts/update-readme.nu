@@ -22,7 +22,8 @@ def get_options_data []: nothing -> list<record> {
     try {
         let parsed = ($output.stdout | from json)
         log debug $"Successfully parsed JSON with ($parsed | length) options"
-        $parsed
+        # Sort options by name to ensure deterministic output
+        $parsed | sort-by name
     } catch { |e|
         error make {
             msg: $"Failed to parse nix-options-doc JSON output: ($e.msg)"

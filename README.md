@@ -83,16 +83,6 @@ Created with the help of these awesome projects:
 Now you can run `hello-nushell` in your shell to get a friendly potato greeting! 🥔
 
 # 🎛️ Module Options
-## [`katoflns-nix-modules.home-manager-username`](modules/default/default.nix#L5)
-Username used for Home Manager integration across all of Katofln's modules. 🥔
-
-This must be set when using any of Katofln's modules that integrate with Home Manager.
-All modules will use this username in their Home Manager configuration.
-
-**Type:** `lib.types.str`
-
-**Example:** `"katofln"`
-
 ## [`katoflns-nix-modules.git.enable`](modules/git/default.nix#L9)
 Enable the Git module with configuration including:
 - Core Git with LFS and gitk — targeting high-performance mono-repo-like usage
@@ -110,20 +100,6 @@ See the nix file for full details.
 
 **Example:** `true`
 
-## [`katoflns-nix-modules.git.userName`](modules/git/default.nix#L21)
-Git username.
-
-**Type:** `lib.types.str`
-
-**Example:** `"katofln"`
-
-## [`katoflns-nix-modules.git.userEmail`](modules/git/default.nix#L27)
-Git email.
-
-**Type:** `lib.types.str`
-
-**Example:** `"katofln@example.com"`
-
 ## [`katoflns-nix-modules.git.signingKey`](modules/git/default.nix#L33)
 The GPG key ID to use for signing commits.
 
@@ -133,6 +109,20 @@ The GPG key ID to use for signing commits.
 
 **Example:** `"0600 cf90 aa2a ea55 07a0  e657 4f43 3d8d 3205 3651"`
 
+## [`katoflns-nix-modules.git.userEmail`](modules/git/default.nix#L27)
+Git email.
+
+**Type:** `lib.types.str`
+
+**Example:** `"katofln@example.com"`
+
+## [`katoflns-nix-modules.git.userName`](modules/git/default.nix#L21)
+Git username.
+
+**Type:** `lib.types.str`
+
+**Example:** `"katofln"`
+
 ## [`katoflns-nix-modules.hello-nushell.enable`](modules/examples/hello-nushell/default.nix#L9)
 Enable the `hello-nushell` greeting command.
 
@@ -141,3 +131,13 @@ Enable the `hello-nushell` greeting command.
 **Default:** `false`
 
 **Example:** `true`
+
+## [`katoflns-nix-modules.home-manager-username`](modules/default/default.nix#L5)
+Username used for Home Manager integration across all of Katofln's modules. 🥔
+
+This must be set when using any of Katofln's modules that integrate with Home Manager.
+All modules will use this username in their Home Manager configuration.
+
+**Type:** `lib.types.str`
+
+**Example:** `"katofln"`

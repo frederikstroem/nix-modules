@@ -6,3 +6,5 @@ inputs:
     inputs:
       nixpkgs:
         follows: nixpkgs
+  parallel-git-hooks:
+    url: github:frederikstroem/parallel-git-hooks/main
