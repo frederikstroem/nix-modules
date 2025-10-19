@@ -123,6 +123,26 @@ Git username.
 
 **Example:** `"katofln"`
 
+## [`katoflns-nix-modules.helix.enable`](modules/helix/default.nix#L9)
+Enable the Helix module with configuration including:
+- Helix text editor (post-modern modal text editor)
+- Custom themes (transparent variants)
+- Indent guides and cursor customization
+- Custom keybindings for Danish keyboard layout
+- Integration with Nushell
+
+A post-modern modal text editor written in Rust.
+https://github.com/helix-editor/helix
+https://helix-editor.com/
+
+See the nix file for full details.
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+**Example:** `true`
+
 ## [`katoflns-nix-modules.hello-nushell.enable`](modules/examples/hello-nushell/default.nix#L9)
 Enable the `hello-nushell` greeting command.
 
