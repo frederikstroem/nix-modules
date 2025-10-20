@@ -108,13 +108,17 @@ in
             programs.git = {
               enable = true;
               package = lib.mkDefault pkgs.gitAndTools.gitFull; # Git full adds `gitk`
-              userName = cfg.userName;
-              userEmail = cfg.userEmail;
-              signing = lib.mkIf (cfg.signingKey != null) {
-                key = cfg.signingKey;
-              };
-              lfs.enable = lib.mkDefault true;
-              extraConfig = {
+              settings = {
+                user = {
+                  name = cfg.userName;
+                  email = cfg.userEmail;
+                };
+                signing = lib.mkIf (cfg.signingKey != null) {
+                  key = cfg.signingKey;
+                };
+                lfs = {
+                  enable = lib.mkDefault true;
+                };
                 core = {
                   editor = lib.mkDefault "hx"; # Helix
                   packedGitLimit = lib.mkDefault "16g";
@@ -141,12 +145,13 @@ in
             ### https://github.com/dandavison/delta
             ### 🦀 Rust 🚀
             ###
-            programs.git.delta = {
+            programs.delta = {
               enable = lib.mkDefault true;
+              enableGitIntegration = lib.mkDefault true;
               options = {
-              dark = lib.mkDefault true;
-              features = lib.mkDefault "decorations";
-              line-numbers = lib.mkDefault true;
+                dark = lib.mkDefault true;
+                features = lib.mkDefault "decorations";
+                line-numbers = lib.mkDefault true;
               };
             };
           }
