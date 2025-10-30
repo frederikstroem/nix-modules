@@ -107,7 +107,7 @@ in
             ###
             programs.git = {
               enable = true;
-              package = lib.mkDefault pkgs.gitAndTools.gitFull; # Git full adds `gitk`
+              package = lib.mkDefault pkgs.gitFull; # Git full adds `gitk`
               settings = {
                 user = {
                   name = cfg.userName;
