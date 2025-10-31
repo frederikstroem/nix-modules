@@ -88,6 +88,7 @@ Enable the Git module with configuration including:
 - Core Git with LFS and gitk — targeting high-performance mono-repo-like usage
 - Delta diff viewer
 - GitHub CLI integration
+- lazygit terminal UI
 - Custom git aliases and commands
 - Dracula theme for gitk
 - Mergiraf syntax-aware merge conflict resolver
@@ -100,7 +101,7 @@ See the nix file for full details.
 
 **Example:** `true`
 
-## [`katoflns-nix-modules.git.signingKey`](modules/git/default.nix#L33)
+## [`katoflns-nix-modules.git.signingKey`](modules/git/default.nix#L34)
 The GPG key ID to use for signing commits.
 
 **Type:** `lib.types.nullOr lib.types.str`
@@ -109,14 +110,14 @@ The GPG key ID to use for signing commits.
 
 **Example:** `"0600 cf90 aa2a ea55 07a0  e657 4f43 3d8d 3205 3651"`
 
-## [`katoflns-nix-modules.git.userEmail`](modules/git/default.nix#L27)
+## [`katoflns-nix-modules.git.userEmail`](modules/git/default.nix#L28)
 Git email.
 
 **Type:** `lib.types.str`
 
 **Example:** `"katofln@example.com"`
 
-## [`katoflns-nix-modules.git.userName`](modules/git/default.nix#L21)
+## [`katoflns-nix-modules.git.userName`](modules/git/default.nix#L22)
 Git username.
 
 **Type:** `lib.types.str`

@@ -11,6 +11,7 @@ in
       - Core Git with LFS and gitk — targeting high-performance mono-repo-like usage
       - Delta diff viewer
       - GitHub CLI integration
+      - lazygit terminal UI
       - Custom git aliases and commands
       - Dracula theme for gitk
       - Mergiraf syntax-aware merge conflict resolver
@@ -165,6 +166,26 @@ in
             programs.gh = {
               enable = lib.mkDefault true;
               gitCredentialHelper.enable = lib.mkDefault true;
+            };
+          }
+          {
+            ###
+            ### lazygit
+            ###
+            ### A simple terminal UI for git commands.
+            ###
+            ### https://github.com/jesseduffield/lazygit
+            ###
+            programs.lazygit = {
+              enable = lib.mkDefault true;
+              settings = {
+                gui = {
+                  showNumstatInFilesView = lib.mkDefault true;
+                  showRandomTip = lib.mkDefault false;
+                  showCommandLog = lib.mkDefault false;
+                };
+                disableStartupPopups = lib.mkDefault true;
+              };
             };
           }
           {
