@@ -12,6 +12,7 @@ in
       - Delta diff viewer
       - GitHub CLI integration
       - lazygit terminal UI
+      - gitui terminal UI
       - Custom git aliases and commands
       - Dracula theme for gitk
       - Mergiraf syntax-aware merge conflict resolver
@@ -186,6 +187,19 @@ in
                 };
                 disableStartupPopups = lib.mkDefault true;
               };
+            };
+          }
+          {
+            ###
+            ### gitui
+            ###
+            ### Blazing 💥 fast terminal-ui for git written in rust 🦀
+            ###
+            ### https://github.com/gitui-org/gitui
+            ### 🦀 Rust 🚀
+            ###
+            programs.gitui = {
+              enable = lib.mkDefault true;
             };
           }
           {
