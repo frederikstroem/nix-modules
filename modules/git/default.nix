@@ -185,6 +185,9 @@ in
                   showRandomTip = lib.mkDefault false;
                   showCommandLog = lib.mkDefault false;
                 };
+                git = {
+                  autoForwardBranches = lib.mkDefault "none";
+                };
                 disableStartupPopups = lib.mkDefault true;
               };
             };
