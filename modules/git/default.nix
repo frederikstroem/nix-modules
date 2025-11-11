@@ -297,58 +297,46 @@ in
             ### Git aliases (Nushell)
             ###
             programs.nushell.shellAliases = {
-              # Git core command
               g = "git";
 
-              # Single characters for most frequent commands
-              "g a" = "git add";                     # add files
-              "g c" = "git commit";                  # commit
-              "g s" = "git status";                  # status
-              "g d" = "git diff";                    # diff working directory
-              "g f" = "git fetch --all --prune";     # fetch all and prune
-              "g l" = "git log";                     # log
-              "g r" = "git restore";                 # restore working directory files
+              "g a" = "git add";
+              "g b" = "git branch";
+              "g c" = "git commit";
+              "g d" = "git diff";
+              "g f" = "git fetch --all --prune";
+              "g j" = "git pull";
+              "g k" = "git push";
+              "g l" = "git log";
+              "g m" = "git merge";
+              "g s" = "git status";
+              "g x" = "git checkout";
+              "g w" = "git worktree";
 
-              # Two characters for everything else
-              "g aa" = "git add --all";              # add all files
-              "g ca" = "git commit --amend";         # amend last commit
-              "g co" = "git checkout";               # checkout branch/commit
-              "g br" = "git branch";                 # list/create branches
-              "g ds" = "git diff --staged";          # diff staged files
+              "g aa" = "git add --all";
 
-              # Remote operations
-              "g ps" = "git push";                   # push
-              "g pl" = "git pull";                   # pull
-              "g mg" = "git merge";                  # merge
-              "g rb" = "git rebase";                 # rebase
-              "g ri" = "git rebase -i";              # interactive rebase
+              "g ba" = "git branch -a";
 
-              # Log variations
-              "g ls" = "git log --stat";             # log with file change stats
-              "g lo" = "git log --oneline";          # one-line log
+              "g ca" = "git commit --amend";
+              "g cn" = "git commit --amend --no-edit";
 
-              # Stash operations
-              "g st" = "git stash";                  # stash changes
-              "g sp" = "git stash pop";              # pop stash
-              "g sa" = "git stash apply";            # apply stash
-              "g sl" = "git stash list";             # list stashes
+              "g cp" = "git cherry-pick";
 
-              # Reset and cleanup
-              "g rs" = "git reset";                  # reset
-              "g rh" = "git reset --hard";           # hard reset
-              "g cl" = "git clean -fd";              # clean untracked files
+              "g ds" = "git diff --staged";
 
-              # Branch management
-              "g bd" = "git branch -d";              # delete branch
-              "g bD" = "git branch -D";              # force delete branch
-              "g ba" = "git branch -a";              # list all branches
+              "g ls" = "git log --stat";
+              "g lo" = "git log --oneline";
 
-              # Other useful commands
-              "g cp" = "git cherry-pick";            # cherry-pick
-              "g tg" = "git tag";                    # tags
-              "g bl" = "git blame";                  # blame
-              "g sh" = "git show";                   # show commit
-              "g wt" = "git worktree";               # worktree operations
+              "g rb" = "git rebase";
+              "g ri" = "git rebase -i";
+
+              "g rs" = "git restore";
+
+              "g sh" = "git show";
+
+              "g st" = "git stash";
+              "g sp" = "git stash pop";
+              "g sa" = "git stash apply";
+              "g sl" = "git stash list";
             };
           }
           {
